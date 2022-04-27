@@ -3,33 +3,30 @@ import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 
-import { RegisterPage } from './register.page';
+import { PickupCallPage } from './pickup-call.page';
 
-describe('RegisterPage', () => {
-  let component: RegisterPage;
-  let fixture: ComponentFixture<RegisterPage>;
+describe('PickupCallPage', () => {
+  let component: PickupCallPage;
+  let fixture: ComponentFixture<PickupCallPage>;
   let router:Router
+
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ RegisterPage ],
+      declarations: [ PickupCallPage ],
       imports: [IonicModule.forRoot(),AppRoutingModule]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(RegisterPage);
-    router= TestBed.get(Router);
+    fixture = TestBed.createComponent(PickupCallPage);
+    router= TestBed.get(Router)
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
 
-  it('should to go home page on register', () => {
+  it('should go to home page on create new pickup-call', () => {
     spyOn(router,'navigate');
-    component.register()
+
+    component.newPickupCall()
+    
     expect(router.navigate).toHaveBeenCalledWith(['home']);
   });
-
-  it('Should redirect to loader page on cancel', ()=>{
-    spyOn(router,'navigate');
-    component.loader()
-    expect(router.navigate).toHaveBeenCalledWith(['loader']);
-  })
 });

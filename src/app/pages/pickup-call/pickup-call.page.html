@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Pickup call</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img
+    src="https://img.macg.co/2016/7/macgpic-1469528138-5761621583970-sc-jpt.jpg"
+    alt="map"
+  />
+  <ion-card>
+    <ion-card-content>
+      <p>Adress: 17 Rue Delandine</p>
+      <p>Zip code: 69002</p>
+      <p>city: Lyon</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item lines="inset">
+      <ion-label position="floating">Notes</ion-label>
+      <ion-textarea></ion-textarea> 
+    </ion-item>
+  </ion-list>
+  <ion-button size="full" color="success" (click)="newPickupCall()">Create Pickup call</ion-button>
+</ion-content>

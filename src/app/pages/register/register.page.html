@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
     <ion-title>Register</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,12 +16,12 @@
       <ion-list>
         <ion-radio-group>
           <ion-item>
-            <ion-label>For work</ion-label>
-            <ion-radio value="WORKER" slot="start"></ion-radio>
+            <ion-label>For buy</ion-label>
+            <ion-radio value="BUY" slot="start"></ion-radio>
           </ion-item>
           <ion-item>
-            <ion-label>For fun</ion-label>
-            <ion-radio value="FUN" slot="start"></ion-radio>
+            <ion-label>For sell</ion-label>
+            <ion-radio value="SELL" slot="start"></ion-radio>
           </ion-item>
         </ion-radio-group>
       </ion-list>
@@ -77,6 +80,14 @@
         <ion-label position="floating">State</ion-label>
         <ion-input type="text"></ion-input>
       </ion-item>
+      <ion-item>
+        <ion-label position="floating">Adress</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Zip code</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
 
       <ion-item>
         <ion-label position="floating">Phone number</ion-label>
@@ -84,7 +95,7 @@
       </ion-item>
     </ion-card-content>
   </ion-card>
-  <ion-button size="full" color="light">Register</ion-button>
-  <ion-button size="full" fill="clear" color="light" routerLink="/login">Cancel</ion-button>
+  <ion-button size="full" color="light" (click)="register()">Register</ion-button>
+  <ion-button size="full" fill="clear" color="light" (click)="loader()">Cancel</ion-button>
 
 </ion-content>

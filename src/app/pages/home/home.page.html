@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>My First App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list color="success">
+    <ion-item color="success">
+      <ion-avatar slot="start">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTILQOAOQ2hO8K8gRjinalTnXzXRhRtBZbzlg&usqp=CAU"
+          alt="avatar"
+        />
+      </ion-avatar>
+      <ion-label>
+        <h1>My First User</h1>
+        <p>Gathered: <span class="money"> 15.00€</span></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <app-pickup-call-card
+    status="hold"
+    updatedAt="26/04/2022 12:16"
+    createdAt="25/04/2022"
+    notes="We have created this note few minutes ago"
+  >
+    <ion-card-header header>
+      <ion-card-subtitle> Last pickup call </ion-card-subtitle>
+    </ion-card-header>
+    <ion-button
+    (click)="goToPickupCalls()"
+    color="success"
+    fill="clear"
+    size="full"
+    footer
+    >See all...</ion-button
+  >
+  </app-pickup-call-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" (click)="openPickupCallForm()">
+      <ion-icon name="add"> </ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
