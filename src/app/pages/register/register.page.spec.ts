@@ -30,6 +30,6 @@ describe('RegisterPage', () => {
   it('Should redirect to loader page on cancel', ()=>{
     spyOn(router,'navigate');
     component.loader()
-    expect(router.navigate).toHaveBeenCalledWith(['loader']);
+    expect(router.navigate).toHaveBeenCalledWith(['login']);
   })
 });
