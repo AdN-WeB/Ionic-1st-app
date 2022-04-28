@@ -39,6 +39,8 @@
             color="medium"
             size="full"
             [disabled]="!loginForm.get('email').valid"
+            id="recoverPasswordButton"
+            (click)="forgotEmailPassword()"
             >Forgot email/password</ion-button
           >
           <ion-button
